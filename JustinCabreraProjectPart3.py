@@ -173,6 +173,7 @@ Owner = pd.read_sql_query("SELECT * FROM Owner", db_connect)
 print(Owner)
 print("\n")
 
+#1 List all members of staff that work at a specified clinic address
 queryNumber1 = """
     SELECT s.*,c.cAddress
     FROM Staff s
@@ -183,7 +184,7 @@ queryNumber1 = """
 queryNumber1 = pd.read_sql_query(queryNumber1, db_connect)
 print(queryNumber1)
 
-
+#What month does the company have the most visits, and which clinic tends to have the most visits in that month?
 queryNumber2 = """
     SELECT strftime('%m', ex.dateSeen) AS month, COUNT(*) AS frequency
     FROM Examination ex
@@ -196,6 +197,7 @@ queryNumber2 = """
 queryNumber2 = pd.read_sql_query(queryNumber2, db_connect)
 print(queryNumber2)
 
+#Which clinic has the most visits? 
 queryNumber3 = """
     SELECT p.clinicNo,count(ex.examNo) AS numVisits
     FROM Examination ex
@@ -208,6 +210,7 @@ queryNumber3 = """
 queryNumber3 = pd.read_sql_query(queryNumber3, db_connect)
 print(queryNumber3)
 
+#What staff have seen pets of a certain breed?
 queryNumber4 = """
     SELECT ex.staffNo,s.sName
     FROM Examination ex
@@ -220,6 +223,7 @@ queryNumber4 = """
 queryNumber4 = pd.read_sql_query(queryNumber4, db_connect)
 print(queryNumber4)
 
+#Obtain all owner information,in addition to what clinic they visit
 queryNumber5 = """
     SELECT o.*,c.cName
     FROM Owner o
