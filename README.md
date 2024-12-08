@@ -3,7 +3,7 @@
 This database is for Project 1 of DSC623.
 We were tasked with creating a ER model, Logical Model and Implementation of the the Pawsome Pets Case study. 
 
-Attached is the Conceptual Model report, the Logical Model report and the py file of the final implementation. 
+Attached is the Report 1 - Conceptual Model report, Report 2 - the Logical Model report , Report 3 - Implementation Report and the py file of the final implementation. 
 
 Case Study:
 A company called Pawsome Pets runs multiple clinics. The company would like for their data
